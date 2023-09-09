@@ -5986,7 +5986,7 @@ pre cite {
 	display: flex;
 	flex-direction: column;
 	/* gap: 10px; */
-	max-width: 350px;
+	max-width: 450px;
 	background-color: #fff;
 	padding: 20px;
 	border-radius: 20px;
@@ -6114,8 +6114,45 @@ pre cite {
   }
 
   .banner{
-	position: relative;background-image: url(./img/utMap.jpg);background-size: cover;height: 100vh;z-index: 1; display: grid;place-items: center;
+	position: relative;
+	background-image: url(../img/utMap.jpg);
+	background-size: cover;
+	height: 100vh;
+	z-index: 1;
+	 display: grid;
+	 place-items: center;
   }
   .overlay{
 	height: 100vh;position: absolute;top: 0;left: 0; width: 100%;background-color: rgba(0, 0, 0, 0.781);z-index: -1;
+  }
+  .first-logo{
+	width: 220px !important;
+  }
+  .banner-logos{
+	width: 150px;
+	padding: 10px;
+  }
+ 
+
+  @media only screen and (max-width: 768px) {
+	.page-header-title{
+		font-size:26px
+	}
+	.banner-logos{
+		margin-top:150px;
+		width: 100px;
+	  }
+	  .first-logo{
+		width: 120px !important;
+	  }
+	  .form{
+		width:100%;
+	  }
+	  .banner{
+		height: auto;
+		padding: 20px 0px;
+	  }
+	  .overlay{
+		height: 100%;
+	  }
   }
