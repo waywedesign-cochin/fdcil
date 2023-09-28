@@ -75,6 +75,9 @@
             transform: scale(1);
   }
 }
+button{
+	cursor: pointer;
+}
 
 .text-outline {
     -webkit-text-stroke-color: #d6f1ff;
@@ -961,6 +964,9 @@ left: 98% !important;
 	height: 400px;
 	background: #ffffff1f;
 	border-radius: 10px;
+}
+#attendSeminar{
+	width: 90px;
 }
 .slider-content ul li {
     display: inline-block;

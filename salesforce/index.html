@@ -31,7 +31,7 @@
                             <div class="col-xl-4 col-lg-4">
                                 <div class="logo text-lg-center">
                                     <!-- <a href="index.html"><img class="bg-white p-2" src="img/FDClogo.png" alt="logo"></a> -->
-                                    <a href="index.html"><img class=" p-2" width="100px" src="img/FDClogo.png" alt="logo"><img width="100px" class="bg-white p-2" src="img/wissen.png" alt="logo"><img width="140px" class=" p-2" src="img/salesforce-partner.jpeg" alt="logo"></a>
+                                    <a class="" href="index.html"><img class=" bg-white p-1 mr-1" width="100px" src="img/FDClogo.png" alt="logo"><img width="140px" class="bg-white p-2" src="img/wissen.png" alt="logo"><img width="160px" class=" p-2" src="img/salesforce-partner.jpeg" alt="logo"></a>
                                 </div>
                             </div>
                             <div class="col-xl-8 col-lg-8">
@@ -84,56 +84,48 @@
 
                     </div>
                     <div class="col-md-4">
-                        <form class="form wow fadeInDown animated" data-animation="fadeInDown animated" data-delay=".2s">
+                        <form id="form" class="form wow fadeInDown animated" data-animation="fadeInDown animated" data-delay=".2s">
                             <p class="title">Register</p>
-                        
                             <p class="message">Salesforce Seminar @ Dehradun hosted by FDC and Wissen</p>
-                            
                             <div class="flex">
                                 <label>
-                                    <input required="" placeholder="" type="text" class="input">
+                                    <input id="firstName" required placeholder="" type="text" class="input">
                                     <span>Firstname</span>
                                 </label>
-                            
                                 <label>
-                                    <input required="" placeholder="" type="text" class="input">
+                                    <input id="lastName" required placeholder="" type="text" class="input">
                                     <span>Lastname</span>
                                 </label>
                             </div>
-                        
                             <label>
-                                <input required="" placeholder="" type="email" class="input">
+                                <input id="OfficialEmail" required placeholder="" type="email" class="input">
                                 <span>Official Email Address</span>
                             </label>
-                            
                             <label>
-                                <input required="" placeholder="" type="text" class="input">
+                                <input id="companyName" required placeholder="" type="text" class="input">
                                 <span>Company Name</span>
                             </label>
-                            
                             <label>
-                                <input required="" placeholder="" type="text" class="input">
+                                <input id="companyAddress" required placeholder="" type="text" class="input">
                                 <span>Company Address</span>
                             </label>
-                        
                             <div class="flex">
                                 <label>
                                     <span>Will you be attending this seminar?</span>
-                                    <select required="" class="input">
+                                    <select id="attendSeminar" required class="input">
                                         <option value="yes">Yes</option>
                                         <option value="no">No</option>
                                         <option value="maybe">Maybe</option>
                                     </select>
                                 </label>
                             </div>
-                        
                             <label class="checkbox-label">
-                                <input type="checkbox" required="" class="checkbox">
-                                <span> Give my concent to share above data with salesforce.</span>
+                                <input id="consent" type="checkbox" required class="checkbox">
+                                <span> Give my consent to share the above data with Salesforce.</span>
                             </label>
-                        
-                            <button class="submit">Submit</button>
+                            <button id="button" class="submit">Submit</button>
                         </form>
+                        
                         
                     </div>
                    
@@ -211,7 +203,7 @@
                             <ul class="wow fadeInDown animated" data-animation="fadeInDown animated" data-delay=".2s" >
                                 <li ><a href="#"><img   src="img/wissen.png" alt="img"></a></li>
                                 <li ><a href="#"><img src="img/FDClogo.png" alt="img"></a></li>
-                                <li ><a href="#"><img width="150px"  src="img/salefoece-wiithout-bg.png" alt="img"></a></li>
+                                <li ><a href="#"><img width="280px"  src="img/salesforce-partner.jpeg" alt="img"></a></li>
                                 
                             </ul>
                         </div>
@@ -301,12 +293,14 @@
                         <div class="col-xl-6 col-lg-8">
                             <div class="section-title text-center mb-80">
                                 <!-- <span class="wow fadeInUp animated" data-animation="fadeInUp animated" data-delay=".2s">Angels</span> -->
-                                <h2 class="wow fadeInUp animated" data-animation="fadeInUp animated" data-delay=".4s">Hear From Salesforce Experts Themselves </h2>
+                                <h2 class="wow fadeInUp animated" data-animation="fadeInUp animated" data-delay=".4s">The Speakers</h2>
                             </div>
                         </div>
+                        <h3 class="text-center">Hear From Salesforce Experts Themselves </h3>
+
                     </div>
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 wow fadeInDown animated" data-animation="fadeInUp animated" data-delay=".2s">
+                        <!-- <div class="col-lg-3 col-md-6 wow fadeInDown animated" data-animation="fadeInUp animated" data-delay=".2s">
                               <div class="single-team text-center pt-50  pb-50 mb-30">
                                 <div class="team-thumb">
                                     <img src="img/speaker_1.png" alt="img">
@@ -382,7 +376,7 @@
 									 <span>Content Writer</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 						 
                         
                         
@@ -435,7 +429,81 @@
         </footer>
         <!-- footer-end -->
 
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      
+      <script type="text/javascript">
+        emailjs.init('7P_lT2HuBb4KfyzsS')
+      </script>
+      <script >
+       // Get references to form elements
+const form = document.getElementById('form');
+const firstNameInput = document.getElementById('firstName');
+const lastNameInput = document.getElementById('lastName');
+const emailInput = document.getElementById('OfficialEmail');
+const companyNameInput = document.getElementById('companyName');
+const companyAddressInput = document.getElementById('companyAddress');
+const attendSeminarInput = document.getElementById('attendSeminar');
+const consentCheckbox = document.getElementById('consent');
+const btn = document.getElementById('button');
 
+// Add an event listener for form submission
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Check if the consent checkbox is checked
+    if (!consentCheckbox.checked) {
+        alert('Please give your consent to share the data with Salesforce.');
+        return;
+    }
+
+    // Get form values
+    const firstName = firstNameInput.value;
+    const lastName = lastNameInput.value;
+    const OfficialEmail = emailInput.value;
+    const companyName = companyNameInput.value;
+    const companyAddress = companyAddressInput.value;
+    const attendSeminar = attendSeminarInput.value;
+
+
+    // Perform any additional form validation here
+
+    // Send the form using Email.js
+
+    const serviceID = 'default_service';
+    const templateID = 'template_z4jmv4c';
+    const templateParams = {
+        firstName,
+        lastName,
+        OfficialEmail,
+        companyName,
+        companyAddress,
+        attendSeminar,
+        consent
+    };
+
+    emailjs.send(serviceID, templateID, templateParams)
+        .then(() => {
+       
+        firstNameInput.value = "";
+        lastNameInput.value = "";
+        emailInput.value = "";
+        companyNameInput.value = "";
+        companyAddressInput.value = "";
+        attendSeminarInput.value = "";
+        consentCheckbox.checked = false;
+
+        btn.value = 'Send Email';
+        alert('Youe Message has been Successfully Sent!');
+        })
+        .catch((err) => {
+            btn.value = 'Send Email';
+            alert(JSON.stringify(err));
+        });
+});
+
+
+      </script>
 
 		<!-- JS here -->
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
