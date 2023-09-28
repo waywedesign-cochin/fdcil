@@ -6062,6 +6062,7 @@ pre cite {
   .form label .input {
 	width: 100%;
 	/* padding: 10px 10px 20px 10px; */
+	margin-bottom: 12px;
 	outline: 0;
 	border: 1px solid rgba(105, 105, 105, 0.397);
 	border-radius: 10px;
