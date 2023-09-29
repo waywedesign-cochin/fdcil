@@ -6143,6 +6143,7 @@ pre cite {
 
   @media only screen and (max-width: 768px) {
 	.page-header-title{
+		margin-top: 20px;
 		font-size:26px
 	}
 	.banner-logos{
@@ -6156,10 +6157,37 @@ pre cite {
 		width:100%;
 	  }
 	  .banner{
-		height: auto;
+		height: 150vh;
 		padding: 20px 0px;
 	  }
 	  .overlay{
 		height: 100%;
+	  }
+  }
+
+  .logo-one{
+	width: 85px;
+  }
+  .logo-two{
+	width: 150px;
+
+  }
+  .logo-three{
+	width: 180px;
+
+  }
+
+  @media only screen and (max-width: 768px) {
+	
+	.logo-one{
+		width: 75px;
+	  }
+	  .logo-two{
+		width: 140px;
+	
+	  }
+	  .logo-three{
+		width: 150px;
+	
 	  }
   }
